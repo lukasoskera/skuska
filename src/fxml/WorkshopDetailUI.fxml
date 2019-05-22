@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="627.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="WsName" layoutX="22.0" layoutY="25.0" text="Workshop example 123">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="80.0" text="Priemerné hodnotenie workshopu :" />
+      <Label layoutX="406.0" layoutY="109.0" text="Priemerná dĺžka workshopu :" />
+      <Label layoutX="405.0" layoutY="142.0" text="Priemerná účasť :" />
+      <Label fx:id="AvgRating" layoutX="638.0" layoutY="80.0" text="Label" />
+      <Label fx:id="AvgTime" layoutX="638.0" layoutY="109.0" text="Label" />
+      <Label fx:id="AvgAttendance" layoutX="638.0" layoutY="142.0" text="Label" />
+      <TextArea fx:id="Description" layoutX="14.0" layoutY="83.0" prefHeight="295.0" prefWidth="358.0" />
+      <TableView fx:id="futureWs" layoutX="16.0" layoutY="413.0" prefHeight="200.0" prefWidth="784.0">
+        <columns>
+          <TableColumn fx:id="SchoolCol" prefWidth="273.0" text="Škola" />
+          <TableColumn fx:id="DateCol" prefWidth="245.0" text="Dátum" />
+            <TableColumn fx:id="AmbaCol" prefWidth="264.0" text="Ambasádor" />
+        </columns>
+      </TableView>
+      <TableView fx:id="Ambas" layoutX="394.0" layoutY="203.0" prefHeight="174.0" prefWidth="398.0">
+        <columns>
+          <TableColumn fx:id="AmbaListCol" prefWidth="239.0" text="Ambasádor" />
+          <TableColumn fx:id="PercCol" prefWidth="145.0" text="Počet organizovaných" />
+        </columns>
+      </TableView>
+      <Label layoutX="394.0" layoutY="178.0" text="Počet workshopov na ambasádora">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="388.0" text="Všetky workshopy">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

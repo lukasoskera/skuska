@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="554.0" prefWidth="810.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontrollers.WorkshopListController">
+   <children>
+      <Text fill="WHITE" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Workshopy">
+         <font>
+            <Font name="Times New Roman" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="homeButton" layoutX="740.0" layoutY="14.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: white;" text="Home" />
+      <Button layoutX="682.0" layoutY="14.0" mnemonicParsing="false" onAction="#PridajWorkshop" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: white;" text="Pridaj" />
+      <Button fx:id="Filtruj" layoutX="626.0" layoutY="14.0" mnemonicParsing="false" onAction="#Filtrovanie" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: white;" text="Filter" />
+      <Separator layoutX="14.0" layoutY="48.0" prefHeight="3.0" prefWidth="785.0" />
+      <TableView fx:id="wstable" layoutX="6.0" layoutY="110.0" prefHeight="437.0" prefWidth="799.0">
+        <columns>
+          <TableColumn fx:id="Názov" prefWidth="178.0" text="Názov" />
+          <TableColumn fx:id="Ambasádor" prefWidth="167.0" text="Ambasádor" />
+            <TableColumn fx:id="Škola" prefWidth="151.0" text="Škola" />
+            <TableColumn fx:id="PočetŽiakov" prefWidth="94.0" text="Počet žiakov" />
+            <TableColumn fx:id="Trvanie" prefWidth="64.0" text="Trvanie" />
+            <TableColumn fx:id="Hodnotenie" prefWidth="89.0" text="Hodnotenie" />
+            <TableColumn fx:id="Report" prefWidth="55.0" text="Report" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="AmbaFilter" layoutX="184.0" layoutY="74.0" prefHeight="25.0" prefWidth="161.0" />
+      <ChoiceBox fx:id="SchoolFilter" layoutX="353.0" layoutY="74.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="NameFilter" layoutX="6.0" layoutY="74.0" onKeyReleased="#FilterMeno" prefHeight="25.0" prefWidth="170.0" />
+      <Text fill="WHITE" layoutX="6.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Názov :" />
+      <Text fill="WHITE" layoutX="184.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ambasádor :" />
+      <Text fill="WHITE" layoutX="353.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Škola :" />
+   </children>
+</AnchorPane>

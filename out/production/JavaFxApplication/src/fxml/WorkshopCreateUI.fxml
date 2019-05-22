@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontrollers.WorkshopCreateController">
+   <children>
+      <GridPane layoutX="50.0" layoutY="95.0" prefHeight="104.0" prefWidth="624.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.8" minWidth="10.0" prefWidth="148.8" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="244.2" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Názov" />
+            <Label text="Škola" GridPane.rowIndex="1" />
+            <Label text="Ambasádor" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="wsName" prefHeight="26.0" prefWidth="465.0" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="schName" prefHeight="26.0" prefWidth="465.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="ambName" prefHeight="26.0" prefWidth="465.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="backButton" layoutX="486.0" layoutY="316.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="81.0" text="Späť" />
+      <Button fx:id="addButton" layoutX="593.0" layoutY="317.0" mnemonicParsing="false" onAction="#Pridaj" prefHeight="25.0" prefWidth="81.0" text="Pridať" />
+      <Label layoutX="50.0" layoutY="30.0" prefHeight="39.0" prefWidth="436.0" text="Nový workshop" textAlignment="CENTER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="50.0" layoutY="213.0" prefHeight="64.0" prefWidth="624.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0000244140625" minWidth="10.0" prefWidth="336.0000244140625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.599951171875" minWidth="10.0" prefWidth="280.79997558593743" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="94.60001220703126" minHeight="10.0" prefHeight="28.99998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="176.9999755859375" minHeight="10.0" prefHeight="35.40001220703125" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Dátum" />
+            <Label text="Čas" GridPane.columnIndex="1" />
+            <DatePicker fx:id="wsDate" GridPane.rowIndex="1" />
+            <Spinner fx:id="wsTime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
